@@ -1,0 +1,14 @@
+@import "../../App/variables.scss";
+
+.cards {
+  // flex
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  color: $default-font-color;
+  font-size: 1.6em;
+  width: 65%;
+
+  margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+@import "../../../App/variables.scss";
+
+.card {
+  width: 40%;
+  padding: calc(1.7 * #{$padding}) calc(1.5 * #{$padding});
+  margin-top: calc(1.5 * #{$margin});
+
+  text-align: left;
+  background-color: $rm-primary-color;
+  border: 2px solid $rm-secondary-color;
+  border-radius: 2%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  align-items: center;
+
+  transition: 1s ease-in-out;
+
+
+  // animation for Rick and Morty
+  &:hover {
+    padding: 0;
+  }
+}
+
+.info {
+  // parent flex
+  flex-grow: 2;
+  // own flex
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 100%;
+
+  &__name {
+    color: $rm-secondary-color;
+
+    font-size: 1.3em;
+
+    border-bottom: 1px solid $rm-secondary-color;
+    padding-bottom: 0.2em;
+  }
+
+  &__details {
+    font-weight: 300;
+    margin-top: calc(0.4 * #{$margin});
+  }
+}

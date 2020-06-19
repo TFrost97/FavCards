@@ -1,0 +1,15 @@
+@import "../../../../App/variables.scss";
+
+.avatar {
+  width: 6em;
+  height: 6em;
+  //   background-color: red;
+  border: 3px solid $rm-secondary-color;
+  border-radius: 50%;
+  margin-right: calc(1.5 * #{$padding});
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+}

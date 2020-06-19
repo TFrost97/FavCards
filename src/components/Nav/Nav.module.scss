@@ -1,0 +1,58 @@
+@import "../../App//variables.scss";
+
+.wrapper {
+  position: fixed;
+  //flex
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: $default-font-color;
+  background-color: $rm-primary-color;
+  box-shadow: 0.8em 0.2em 1em rgba($color: #000000, $alpha: 0.4);
+
+  font-size: 2em;
+  //   width: 20%;
+  height: 100vh;
+}
+
+.logo {
+  //   background-color: red;
+  text-align: center;
+
+  margin: $margin;
+  color: $rm-secondary-color;
+}
+
+.links {
+  // parent flex
+  flex-grow: 2;
+  // flex
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link {
+  width: 100%;
+  margin: $margin auto;
+  display: flex;
+  align-items: center;
+
+  &:hover:nth-child(2) .icon {
+      border-color: red;
+  } 
+
+    &:hover:nth-child(3) .icon {
+      border-color: orange;
+  } 
+
+}
+
+.icon {
+    margin: 0 auto;
+    border: .5em solid $rm-secondary-color;
+    border-radius: 50%;
+    padding: .8em;
+    
+}
