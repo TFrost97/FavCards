@@ -1,4 +1,4 @@
-@import "../../../App/variables.scss";
+@import "App/variables.scss";
 
 .card {
   width: 40%;
@@ -15,7 +15,6 @@
   align-items: center;
 
   transition: 1s ease-in-out;
-
 
   // animation for Rick and Morty
   &:hover {

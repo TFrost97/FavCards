@@ -11,10 +11,12 @@ const CharactersCards = ({ characters, title }) => (
       <ul className={styles.cards}>
         {characters.map((character) => (
           <Card
+            // always pass
             name={character.name}
+            image={character.image}
+            // conditionally
             gender={character.gender}
             species={character.species}
-            image={character.image}
           />
         ))}
       </ul>

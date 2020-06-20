@@ -9,10 +9,24 @@ class App extends React.Component {
       <>
         <div className={styles.wrapper}>
           <Nav />
-          <Cards />
+          <Cards type="rickMorty" />
         </div>
       </>
     );
+
+    // // future pattern
+    // return (
+    //   <>
+    //     <div className={styles.wrapper}>
+    //       <Nav />
+    //       <BrowserRouter>
+    //         <Route exact path="/" component={RickMortyView} />
+    //         <Route path="/articles" component={MarvelView} />
+    //         <Route path="/notes" component={NarutoView} />
+    //       </BrowserRouter>
+    //     </div>
+    //   </>
+    // );
   }
 }
 
