@@ -3,13 +3,12 @@ import CharactersCards from "../components/CharactersCards/CharactersCards";
 import axios from "axios";
 
 import MarvelCards from "./helperClasses/MarvelCards";
+import RickMortyCards from "./helperClasses/RickMortyCards";
 
 // for hash marvel key
 import MD5 from "crypto-js/md5";
 
 class Cards extends React.Component {
-  RICKandMORTY_API = "https://rickandmortyapi.com";
-
   state = {
     characters: "bla",
     title: {
@@ -25,31 +24,10 @@ class Cards extends React.Component {
   };
 
   getRickMortyCards = async () => {
-    // future class
-    const data = await axios.get(`${this.RICKandMORTY_API}/api/character`);
-    const cardsObject = await data.data.results;
-    return await cardsObject;
+    return new RickMortyCards();
   };
 
   getMarvelCards = async () => {
-    // console.log(await "działanko");
-    // console.log(MD5("mesagae").toString());
-    // let publicKey = "936ec40e643cd2c6bc5e6b144b9b4f19";
-    // let privateKey = "f7b9509badcc927c52d1986efc1d51aad85236b6";
-    // let ts = new Date().getTime();
-    // let hash = MD5(ts + privateKey + publicKey);
-
-    // let has
-    // // future class
-    // baseurl = 'https://gateway.marvel.com';
-    // const data = await axios.get(
-    //   `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`
-    // );
-    // console.log(await `${data.data.data.results}`, "rezultaty");
-    //create class for rick and morty and marvel
-    // console.log(await data.data.data.results[1].thumbnail.path, "rezultaty");
-
-    // return data.data.data.results;
     return new MarvelCards();
   };
 

@@ -13,6 +13,7 @@ class MarvelCards {
     this.timeStamp = new Date().getTime();
     this.hash = this.getHash();
 
+    // store all card object
     this.characters = [
       // {
       // name: value,
@@ -21,6 +22,7 @@ class MarvelCards {
       // }
     ];
     this.init();
+    console.log(this.characters);
   }
 
   getHash = () => MD5(this.timeStamp + this.privateKey + this.publicKey);
@@ -31,10 +33,13 @@ class MarvelCards {
     );
   };
 
+  // Marvel api gives only part of image url
+  // getImage parse path into full url
   getImage = (path_) => {
     return `${path_}/${this.imageOptions.size}.${this.imageOptions.extansion}`;
   };
 
+  // for empty description set sample one
   getDescription = (description) =>
     description.length === 0 ? "just awesome character!" : description;
 
@@ -51,7 +56,6 @@ class MarvelCards {
       };
       this.characters.push(card);
     });
-    console.log(cardsData.data.data.results[0].thumbnail.path, "cardsdata");
   };
 
   init = async () => {
