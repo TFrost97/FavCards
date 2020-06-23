@@ -25,9 +25,9 @@ const Nav = () => (
         </li>
       </Link>
 
-      <Link to="/naruto">
+      <Link to="/pokemons">
         <li className={`${styles.link} ${styles.link__marvel}`}>
-          <img className={styles.icon} src={narutoIcon} alt="naruto" />
+          <img className={styles.icon} src={narutoIcon} alt="pokemons" />
         </li>
       </Link>
     </ul>

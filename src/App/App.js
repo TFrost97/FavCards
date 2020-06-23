@@ -20,6 +20,10 @@ class App extends React.Component {
           <Route exact path="/marvel">
             <Cards type="marvel" />
           </Route>
+
+          <Route exact path="/pokemons">
+            <Cards type="pokemons" />
+          </Route>
         </div>
       </BrowserRouter>
     );

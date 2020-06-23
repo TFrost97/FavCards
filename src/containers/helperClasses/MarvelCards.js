@@ -22,7 +22,7 @@ class MarvelCards {
       // }
     ];
     this.init();
-    console.log(this.characters);
+    console.log(this.characters, "characters");
   }
 
   getHash = () => MD5(this.timeStamp + this.privateKey + this.publicKey);

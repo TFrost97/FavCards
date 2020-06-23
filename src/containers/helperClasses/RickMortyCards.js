@@ -14,7 +14,7 @@ class RickMortyCards {
       // }
     ];
     this.init();
-    console.log(this.characters);
+    console.log(this.characters, "characters");
   }
 
   getCardsData = async () => await axios.get(`${this.BASE_url}/api/character`);
