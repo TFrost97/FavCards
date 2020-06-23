@@ -10,15 +10,15 @@ class App extends React.Component {
       <BrowserRouter>
         <div className={styles.wrapper}>
           <Nav />
-          <Route path="/">
+          <Route exact path="/">
             <h1>główna strona!@!!@!@!@!@!@!!@!@!@</h1>
           </Route>
-          <Route path="/rickandmorty">
+          <Route exact path="/rickandmorty">
             <Cards type="rickMorty" />
           </Route>
 
-          <Route path="/marvel">
-            <h1>future MARVEL</h1>
+          <Route exact path="/marvel">
+            <Cards type="marvel" />
           </Route>
         </div>
       </BrowserRouter>
