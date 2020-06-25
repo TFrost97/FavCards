@@ -9,7 +9,7 @@ import PokemonsCards from "./helperClasses/PokemonsCards";
 
 class Cards extends React.Component {
   state = {
-    characters: "bla",
+    characters: [],
     title: {
       rickMorty: "Rick And Morty",
       marvel: "Marvel",
@@ -24,15 +24,15 @@ class Cards extends React.Component {
   };
 
   getRickMortyCards = async () => {
-    return new RickMortyCards();
+    return await new RickMortyCards().getCards();
   };
 
   getMarvelCards = async () => {
-    return new MarvelCards();
+    return await new MarvelCards().getCards();
   };
 
   getPokemonsCards = async () => {
-    return new PokemonsCards();
+    return await new PokemonsCards().getCards();
   };
 
   cardsType = {
@@ -43,24 +43,23 @@ class Cards extends React.Component {
 
   // setState with cards type given in props (app.js)
   componentDidMount = async () => {
-    // console.log(await this.cardsType["marvel"]());
-    // console.log(await [this.props.type]);
-    console.log(this.props.type, "props type");
     const getCards = await this.cardsType[this.props.type];
-    // console.log(await getCards());
+    // console.log(await getCards(), "get cards");
+    // const result = await getCards();
+    // console.log(result[0], 'result');
 
-    return await this.setState({ characters: await getCards() });
+    return this.setState({ characters: await getCards() });
   };
 
   render() {
     const { type } = this.props;
     return (
       <>
-        {/* <img src={this.state.characters[0].thumbnail.path} alt="" /> */}
-        {/* <CharactersCards
+        <CharactersCards
           characters={this.state.characters}
           title={this.state.title[type]}
-        /> */}
+          type={type}
+        />
       </>
     );
   }

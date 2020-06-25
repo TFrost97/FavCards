@@ -13,8 +13,8 @@ class RickMortyCards {
       // image: value,
       // }
     ];
-    this.init();
-    console.log(this.characters, "characters");
+    // this.init();
+    // console.log(this.characters, "characters");
   }
 
   getCardsData = async () => await axios.get(`${this.BASE_url}/api/character`);
@@ -31,12 +31,9 @@ class RickMortyCards {
         gender: card_.gender,
         image: card_.image,
       };
+      // console.log(card, "karta rick morty");
       this.characters.push(card);
     });
-  };
-
-  init = async () => {
-    await this.getCards();
     return this.characters;
   };
 }

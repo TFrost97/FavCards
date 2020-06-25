@@ -21,7 +21,8 @@ class MarvelCards {
       // image: value,
       // }
     ];
-    this.init();
+    // console.log(this.characters[0], "characters marvel 2");
+
     console.log(this.characters, "characters");
   }
 
@@ -54,12 +55,10 @@ class MarvelCards {
         desc: this.getDescription(card_.description),
         image: this.getImage(card_.thumbnail.path),
       };
+      // console.log(card, "karta marvel");
+
       this.characters.push(card);
     });
-  };
-
-  init = async () => {
-    await this.getCards();
     return this.characters;
   };
 }

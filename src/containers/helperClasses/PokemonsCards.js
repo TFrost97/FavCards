@@ -7,16 +7,14 @@ class PokemonsCards {
     this.IMAGE_url = `https://pokeres.bastionbot.org/images/pokemon/`;
 
     // store all card object
-    this.characters = [
-      // {
-      // name: value,
-      // spacies: value,
-      // gender: value,
-      // image: value,
-      // }
-    ];
-    this.init();
-    console.log(this.characters, "characters");
+    this.characters = [];
+    // {
+    // name: value,
+    // spacies: value,
+    // gender: value,
+    // image: value,
+    // }
+    // console.log(this.characters[0], "characters pokemon ");
   }
 
   // resolve only the name and url to specyfic pokemon details
@@ -31,30 +29,33 @@ class PokemonsCards {
 
   // create each card object and push to characters object in constructor
   getCards = async () => {
-    const cardsData = await this.getCardsData();
-    // Pokemons API structre has object data and then results array
-    // use there to have capability to use map method
-    await cardsData.data.results.map(async (card_, index_) => {
-      let cardDetails = await this.getCardDataDetail(index_ + 1);
-      cardDetails = await cardDetails.data;
+    console.log("jestem w getCards");
+    const cardsData = (await this.getCardsData()).data.results;
+    let pokeObject = [];
 
-      // store image url in variables
-      let cardImage = await this.getCardImage(index_ + 1);
-      cardImage = await cardImage.config.url;
+    for (const [index, card] of cardsData.entries()) {
+      const [cardDetails, cardImage] = await Promise.all([
+        this.getCardDataDetail(index + 1),
+        this.getCardImage(index + 1),
+      ]);
+
+      const { name, abilities, types } = cardDetails.data;
+      const url = cardImage.config.url;
 
       const card = {
-        name: cardDetails.name,
-        type: cardDetails.types[0].type.name,
-        ability: cardDetails.abilities[0].ability.name,
-        image: await cardImage,
+        name: name,
+        type: types[0].type.name,
+        ability: abilities[0].ability.name,
+        image: url,
       };
-      this.characters.push(card);
-    });
-  };
 
-  init = async () => {
-    await this.getCards();
+      // console.log(cardDetails, cardImage, "details & image");
+      this.characters.push(card);
+    }
+    console.log(this.characters, "pokeObject");
     return this.characters;
+    // Pokemons API structre has object data and then results array
+    // use there to have capability to use map method
   };
 }
 
