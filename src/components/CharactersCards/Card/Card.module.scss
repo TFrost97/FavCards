@@ -1,25 +1,28 @@
 @import "App/variables.scss";
 
-.card {
+@mixin card {
   width: 40%;
   padding: calc(1.7 * #{$padding}) calc(1.5 * #{$padding});
   margin-top: calc(1.5 * #{$margin});
 
   text-align: left;
-  background-color: $rm-primary-color;
-  border: 2px solid $rm-secondary-color;
+  // background-color: $rm-primary-color;
+  // border: 2px solid $rm-secondary-color;
   border-radius: 2%;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 
   display: flex;
   align-items: center;
+}
 
-  transition: 1s ease-in-out;
+.lightCard {
+  @include card;
+  background-color: $light-el-bgc;
+}
 
-  // animation for Rick and Morty
-  &:hover {
-    padding: 0;
-  }
+.darkCard {
+  @include card;
+  background-color: $dark-el-bgc;
 }
 
 .info {
@@ -32,16 +35,15 @@
 
   height: 100%;
 
-  &__name {
-    color: $rm-secondary-color;
-
+  &Name {
     font-size: 1.3em;
 
-    border-bottom: 1px solid $rm-secondary-color;
+    text-transform: uppercase;
+    // border-bottom: 1px solid $rm-secondary-color;
     padding-bottom: 0.2em;
   }
 
-  &__details {
+  &Wrapper {
     font-weight: 300;
     margin-top: calc(0.4 * #{$margin});
   }

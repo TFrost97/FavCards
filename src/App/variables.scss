@@ -1,13 +1,30 @@
-$sw-primary-color: #000;
-$sw-secondary-color: #ffe81f;
+// Rick & Morty
+$rick-morty-color: #97d652;
 
-$rm-primary-color: #325659;
-$rm-secondary-color: #97ce4c;
+// Marvel
+$marvel-color: #dd2030;
 
-$bgc-color: #1e232c;
-$default-font-color: #fff;
+// Pokemons
+$pokemon-color: #3b4cca;
+
+// $bgc-color: #1e232c;
+// $default-font-color: #fff;
+
+// default variables
+$el-text-color: #a2adbe;
+$box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
 
 // size
 $font-size: 10px;
 $padding: 1em;
 $margin: 1em;
+
+// LIGHT THEME
+$light-bgc: #f5f6fa;
+$light-el-bgc: #fff;
+$light-color: #000;
+
+// dark THEME
+$dark-bgc: #38373c;
+$dark-el-bgc: #000;
+$dark-color: #fff;

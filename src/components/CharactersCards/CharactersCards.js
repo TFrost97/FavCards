@@ -12,32 +12,31 @@ const CharactersCards = ({ characters, title, type }) => {
         <ul className={styles.cards}>
           {characters.map((character) => {
             let additionalInfo = <div>sas</div>;
-            console.log(characters, "characters");
 
             switch (type) {
               case "rickMorty":
                 additionalInfo = (
                   <>
-                    <p className={styles.text}>name: {character.name}</p>
-                    <p className={styles.text}>species: {character.species}</p>
-                    <p className={styles.text}>gender: {character.gender}</p>
+                    <p className={styles.text}>Name: {character.name}</p>
+                    <p className={styles.text}>Species: {character.species}</p>
+                    <p className={styles.text}>Gender: {character.gender}</p>
                   </>
                 );
                 break;
               case "marvel":
                 additionalInfo = (
                   <>
-                    <p className={styles.text}>name: {character.name}</p>
-                    <p className={styles.text}>desc: {character.desc}</p>
+                    <p className={styles.text}>Name: {character.name}</p>
+                    <p className={styles.text}>Desc: {character.desc}</p>
                   </>
                 );
                 break;
               case "pokemons":
                 additionalInfo = (
                   <>
-                    <p className={styles.text}>name: {character.name}</p>
-                    <p className={styles.text}>type: {character.type}</p>
-                    <p className={styles.text}>ability: {character.ability}</p>
+                    <p className={styles.text}>Name: {character.name}</p>
+                    <p className={styles.text}>Type: {character.type}</p>
+                    <p className={styles.text}>Ability: {character.ability}</p>
                   </>
                 );
                 break;

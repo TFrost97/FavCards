@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
-  color: $default-font-color;
+  // color: $default-font-color;
   font-size: 1.6em;
   width: 65%;
 
@@ -15,4 +15,5 @@
 
 .text {
   margin-top: 0.3em;
+  color: $el-text-color;
 }
