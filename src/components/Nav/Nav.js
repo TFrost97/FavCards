@@ -14,12 +14,10 @@ import { ThemeContext } from "contexts";
 
 // in usage https://icons8.com/icons/set/iron-man
 
-const Nav = ({ changeTheme }) => {
+const Nav = ({ toggleModal, changeTheme }) => {
   return (
     <ThemeContext.Consumer>
       {({ themeType }) => {
-        console.log(themeType, "theme type");
-
         return (
           <nav
             className={themeType === "light" ? styles.lightNav : styles.darkNav}
@@ -65,9 +63,9 @@ const Nav = ({ changeTheme }) => {
                 />
               </NavLink>
             </ul>
-            <button className={styles.closeBtn} onClick={changeTheme}>
+            <button className={styles.modalBtn} onClick={toggleModal}>
               <img
-                className={styles.closeBtnImage}
+                className={styles.modalBtnImage}
                 src={themeType === "light" ? lightSettings : darkSettings}
                 alt="x"
               />

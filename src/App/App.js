@@ -5,16 +5,25 @@ import styles from "./App.module.scss";
 import Cards from "../containers/Cards";
 import Nav from "../components/Nav/Nav";
 import RootView from "../views/RootView";
+import Modal from "../components/Modal/Modal";
 
 class App extends React.Component {
   state = {
     // theme:  light / dark
     themeType: "light",
+    modalIsOpen: true,
   };
 
   toggleTheme = () => {
     this.setState((state) => ({
       themeType: state.themeType === "light" ? "dark" : "light",
+    }));
+  };
+
+  toggleModal = () => {
+    console.log("klikniety modal");
+    this.setState((state) => ({
+      modalIsOpen: state.modalIsOpen === false ? true : false,
     }));
   };
 
@@ -27,7 +36,16 @@ class App extends React.Component {
               this.state.themeType === "light" ? styles.light : styles.dark
             }
           >
-            <Nav changeTheme={this.toggleTheme} />
+            <Nav
+              toggleModal={this.toggleModal}
+              themeType={this.state.themeType}
+            />
+            {this.state.modalIsOpen === true && (
+              <Modal
+                toggleTheme={this.toggleTheme}
+                toggleModal={this.toggleModal}
+              ></Modal>
+            )}
             <Route exact path="/">
               <RootView />
             </Route>

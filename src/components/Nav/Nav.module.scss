@@ -16,7 +16,7 @@
   height: 100vh;
 }
 
-.closeBtn {
+.modalBtn {
   width: 50%;
   margin: 0 auto 1em auto;
 
@@ -113,7 +113,7 @@
     color: $light-color;
   }
 
-  .closeBtn {
+  .modalBtn {
     // @include close-btn;
     background-color: $light-el-bgc;
 
@@ -136,7 +136,7 @@
     color: $dark-color;
   }
 
-  .closeBtn {
+  .modalBtn {
     background-color: $dark-el-bgc;
   }
 }
