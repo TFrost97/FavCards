@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import styles from "./App.module.scss";
 import Cards from "../containers/Cards";
 import Nav from "../components/Nav/Nav";
+import RootView from "../views/RootView";
 
 class App extends React.Component {
   state = {
@@ -28,10 +29,10 @@ class App extends React.Component {
           >
             <Nav changeTheme={this.toggleTheme} />
             <Route exact path="/">
-              <h1>główna strona!@!!@!@!@!@!@!!@!@!@</h1>
+              <RootView />
             </Route>
             <Route exact path="/rickandmorty">
-              <Cards type="rickMorty" />
+              <Cards type="rickandmorty" />
             </Route>
 
             <Route exact path="/marvel">

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CharactersCards.module.scss";
 import Card from "./Card/Card";
-import Title from "./Title/Title";
+import Title from "../Title/Title";
 
 import { typeContext } from "contexts";
 
@@ -16,7 +16,7 @@ const CharactersCards = ({ characters, title, type }) => {
             let additionalInfo;
 
             switch (type) {
-              case "rickMorty":
+              case "rickandmorty":
                 additionalInfo = (
                   <>
                     <p className={styles.text}>Name: {character.name}</p>

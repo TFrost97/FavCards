@@ -9,9 +9,11 @@ const Title = (props) => (
     {({ themeType }) => (
       <TypeContext.Consumer>
         {(type) => {
+          const marginLeft =
+            props.margin === "marginLeft" ? styles.marginLeft : "";
           let borderColor;
           switch (type) {
-            case "rickMorty":
+            case "rickandmorty":
               borderColor = styles.rickMortyBorder;
               break;
 
@@ -27,8 +29,9 @@ const Title = (props) => (
           return (
             <h1
               className={classnames(
+                borderColor,
                 themeType === "light" ? styles.light : styles.dark,
-                borderColor
+                marginLeft
               )}
             >
               {props.children}

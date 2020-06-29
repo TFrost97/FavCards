@@ -1,0 +1,39 @@
+@import "App/variables.scss";
+
+@mixin title {
+  text-align: left;
+
+  font-size: 3em;
+  padding-left: 1em;
+}
+
+.light {
+  @include title;
+  color: $light-color;
+
+  border-left: 3px solid $el-text-color;
+}
+
+.dark {
+  @include title;
+
+  color: $dark-color;
+
+  border-left: 3px solid $el-text-color;
+}
+
+.rickMortyBorder {
+  border-left: 3px solid $rick-morty-color;
+}
+
+.marvelBorder {
+  border-left: 3px solid $marvel-color;
+}
+
+.pokemonsBorder {
+  border-left: 3px solid $pokemons-color;
+}
+
+.marginLeft {
+  margin-left: 0.5em;
+}

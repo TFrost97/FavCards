@@ -13,7 +13,7 @@ class Cards extends React.Component {
   state = {
     characters: [],
     title: {
-      rickMorty: "Rick And Morty",
+      rickandmorty: "Rick And Morty",
       marvel: "Marvel",
       pokemons: "Pokemons, did you catch them all?",
     },
@@ -38,7 +38,7 @@ class Cards extends React.Component {
   };
 
   cardsType = {
-    rickMorty: this.getRickMortyCards,
+    rickandmorty: this.getRickMortyCards,
     marvel: this.getMarvelCards,
     pokemons: this.getPokemonsCards,
   };

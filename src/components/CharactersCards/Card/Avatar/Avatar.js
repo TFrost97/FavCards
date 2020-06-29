@@ -9,7 +9,7 @@ const Avatar = ({ image }) => (
     {(type) => {
       let borderColor;
       switch (type) {
-        case "rickMorty":
+        case "rickandmorty":
           borderColor = styles.rickMortyBorder;
           break;
 

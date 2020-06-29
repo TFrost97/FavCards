@@ -5,18 +5,24 @@ body {
   background-color: red;
   font-size: $font-size;
   font-family: "Roboto";
+  // height: 100%;
+  // width: 100%;
+}
+
+@mixin minHeight {
+  min-height: 100vh;
 }
 
 .light {
-  // @include wrapper;
+  @include minHeight;
+
   background-color: #f5f6fa;
-  min-height: 100vh;
 
   color: #000;
 }
 
 .dark {
-  // @include wrapper;
+  @include minHeight;
 
   background-color: $dark-bgc;
 
