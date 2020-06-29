@@ -7,6 +7,8 @@ import MarvelCards from "./helperClasses/MarvelCards";
 import RickMortyCards from "./helperClasses/RickMortyCards";
 import PokemonsCards from "./helperClasses/PokemonsCards";
 
+import { TypeContext } from "contexts";
+
 class Cards extends React.Component {
   state = {
     characters: [],
@@ -55,11 +57,13 @@ class Cards extends React.Component {
     const { type } = this.props;
     return (
       <>
-        <CharactersCards
-          characters={this.state.characters}
-          title={this.state.title[type]}
-          type={type}
-        />
+        <TypeContext.Provider value={type}>
+          <CharactersCards
+            characters={this.state.characters}
+            title={this.state.title[type]}
+            type={type}
+          />
+        </TypeContext.Provider>
       </>
     );
   }

@@ -10,7 +10,7 @@ import lightSettings from "assets/icons/light-settings.png";
 import darkSettings from "assets/icons/dark-settings.png";
 
 import { NavLink } from "react-router-dom";
-import ThemeContext from "theme-context";
+import { ThemeContext } from "contexts";
 
 // in usage https://icons8.com/icons/set/iron-man
 

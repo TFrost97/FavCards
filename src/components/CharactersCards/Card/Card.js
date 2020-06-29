@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Card.module.scss";
 import Avatar from "./Avatar/Avatar";
-import ThemeContext from "theme-context";
+import { ThemeContext } from "contexts";
 
 const Card = ({ name, image, additionalInfo }) => (
   // create object with props KEY for displaying

@@ -2,22 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&display=swap");
 
 body {
-  // background-color: $bgc-color;
+  background-color: red;
   font-size: $font-size;
   font-family: "Roboto";
 }
 
-.wrapper {
-  display: flex;
-}
-
 .light {
+  // @include wrapper;
   background-color: #f5f6fa;
+  min-height: 100vh;
 
   color: #000;
 }
 
 .dark {
+  // @include wrapper;
+
   background-color: $dark-bgc;
 
   color: #fff;

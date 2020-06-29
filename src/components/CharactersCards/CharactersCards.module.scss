@@ -1,19 +1,28 @@
 @import "App/variables.scss";
 
+.wrapper {
+  margin-left: $default-nav-width;
+  padding: 5em 5em;
+  height: 100%;
+}
+
 .cards {
   // flex
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
   // color: $default-font-color;
   font-size: 1.6em;
-  width: 65%;
 
-  margin: 0 auto;
+  margin: calc(2 * #{$margin}) auto 0 auto;
 }
 
 .text {
-  margin-top: 0.3em;
+  margin-top: 0.35em;
   color: $el-text-color;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

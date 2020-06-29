@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeContext from "../theme-context";
+import { ThemeContext } from "../contexts";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import styles from "./App.module.scss";
 import Cards from "../containers/Cards";

@@ -3,6 +3,8 @@ import styles from "./CharactersCards.module.scss";
 import Card from "./Card/Card";
 import Title from "./Title/Title";
 
+import { typeContext } from "contexts";
+
 const CharactersCards = ({ characters, title, type }) => {
   return (
     <>
@@ -11,7 +13,7 @@ const CharactersCards = ({ characters, title, type }) => {
 
         <ul className={styles.cards}>
           {characters.map((character) => {
-            let additionalInfo = <div>sas</div>;
+            let additionalInfo;
 
             switch (type) {
               case "rickMorty":
