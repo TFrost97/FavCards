@@ -60,3 +60,10 @@
     margin-top: calc(0.4 * #{$margin});
   }
 }
+
+@media (max-width: 991.98px) and (orientation: portrait) {
+  .lightCard,
+  .darkCard {
+    width: 100%;
+  }
+}

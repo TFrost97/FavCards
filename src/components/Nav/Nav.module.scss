@@ -140,3 +140,76 @@
     background-color: $dark-el-bgc;
   }
 }
+
+@media (max-width: 991.98px) {
+  .darkNav,
+  .lightNav {
+    position: static;
+    // flex
+    flex-direction: row;
+    align-items: flex-start;
+
+    background-color: inherit;
+    box-shadow: none;
+
+    height: 10em;
+    width: 100%;
+
+    .links {
+      flex-direction: row;
+      flex-grow: 0;
+
+      width: 50%;
+      margin-top: 5em;
+
+      .linkActivePokemons,
+      .linkActiveRickMorty,
+      .linkActiveMarvel {
+        border-left: none;
+        background-color: transparent;
+      }
+      .linkActivePokemons {
+        border-bottom: 3px solid $pokemons-color;
+      }
+
+      .linkActiveMarvel {
+        border-bottom: 3px solid $marvel-color;
+      }
+
+      .linkActiveRickMorty {
+        border-bottom: 3px solid $rick-morty-color;
+      }
+
+      .link {
+        margin: 0 1.5em;
+        height: 5em;
+      }
+    }
+
+    .logo {
+      margin: 1em;
+      padding: 0;
+    }
+
+    .modalBtn {
+      background-color: transparent;
+      width: 3em;
+      margin: 1em;
+      padding: 0;
+
+      &Image {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+// // Small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) { ... }
+
+// // Medium devices (tablets, less than 992px)
+// @media (max-width: 991.98px) { ... }
+
+// // Large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) { ... }

@@ -11,7 +11,7 @@ class App extends React.Component {
   state = {
     // theme:  light / dark
     themeType: "light",
-    modalIsOpen: true,
+    modalIsOpen: false,
   };
 
   toggleTheme = () => {

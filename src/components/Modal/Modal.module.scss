@@ -6,7 +6,8 @@
   align-items: center;
   color: #000;
 
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba($color: #000000, $alpha: 0.7);
@@ -119,4 +120,23 @@ input[type="checkbox"] {
 
 .toggleState:checked ~ .toggleInner .indicator {
   transform: translate3d(25%, 0, 0);
+}
+
+@media (max-width: 991.98px) {
+  .wrapper {
+    padding: 2em;
+  }
+  .label {
+    // flex
+    display: flex;
+    flex-direction: column-reverse;
+
+    &Text {
+      margin: 1em 0 1em 0;
+    }
+  }
+
+  .header {
+    font-size: 3em;
+  }
 }
